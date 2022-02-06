@@ -1,0 +1,62 @@
+@import "../parciales/vars";
+@import "../parciales/responsive";
+@import "../parciales/mapas";
+.main__us {
+    background-image: url(../assets/casaEjemplo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -50px;
+    @include net {
+        background-position-y: 0;
+        padding: 10% 20%;   
+    }
+    & .us__article  {
+        color: #000;
+        font-family: 'Raleway', sans-serif;
+        background-color: $transp;
+        padding: map-get($font,30px);
+        margin: 5rem 0 0 0 ;
+        & h1 {
+            font-size: map-get($font,50px); 
+            font-weight: 900;
+            padding-bottom: map-get($font,15px);
+            @include pc {
+                font-size: map-get($font,40px);
+            }
+            @include tablet {
+                font-size: map-get($font,30px);
+                font-weight: bold;
+            }
+            @include tablet-med {
+                font-size: map-get($font,25px);
+            }
+            @include mobil{
+                font-size: map-get($font,25px);
+            }
+        }
+        & h2 {
+            font-weight: 700;
+            font-size: map-get($font,20px);
+            padding-bottom: map-get($font,30px);
+            @include tablet {
+            font-size: map-get($font,25px); 
+            }
+            @include tablet-med {
+                font-size: map-get($font,20px);
+            }
+            @include mobil{
+                font-size: map-get($font,15px);
+            }
+        }
+        & h3 {
+            font-weight: 600;
+            padding-bottom: map-get($font,15px);
+            @include mobil{
+                font-size: map-get($font,15px);
+            }
+        }
+        & p {
+            font-weight: bold;
+        }
+    }
+}

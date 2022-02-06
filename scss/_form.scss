@@ -1,0 +1,68 @@
+@import "../scss/vars";
+@import "../scss/responsive";
+@import "../scss/mapas";
+.main__form {
+    background: $fondo-gradiant;
+    padding-top: 100px;
+    @include tablet {
+        padding-bottom: 40px;
+    }
+    & h1 {
+        font-size: map-get($font,30px);
+        padding-bottom: 20px; 
+        @include tablet {
+            font-size: map-get($font,25px);
+        }
+        @include tablet-med {
+            font-size: map-get($font,20px);
+        }
+    }
+    .form__form {
+        & input,
+        & textarea,
+        & select{
+            border: none;
+            background: none;
+            color: #fff;
+            border-bottom: 1px solid #666;
+            text-align: center;
+        }
+        & option {
+            background: #000;
+        }
+        & .button {
+            text-transform: uppercase;
+            background: #666;
+            width: 40%;
+            border-radius: 4px;
+            padding: 7px;
+            &:hover,
+            &:focus {
+                background: #fff;
+                color: #000;
+                transition: background-color 1s ease-out;
+            }
+        }
+        & .form__datos {
+            margin-bottom: 20px;
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        & .form__datos label {
+            padding: 0 20px;
+        }
+        & textarea:hover{
+            background-color: rgba(34, 34, 34, 0.5);
+            transition: .4s;
+            border-radius: 7px 7px 0 0;
+        }
+        & input:hover {
+            @extend textarea:hover;
+        }
+        & select:hover {
+            @extend textarea:hover;
+        }
+    }
+}
